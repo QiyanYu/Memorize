@@ -12,19 +12,35 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
-        VStack {
+        let theme = self.viewModel.getTheme()
+        return VStack {
+            HStack{
+                Text(theme.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("LizardDark"), Color("LizardLight")]), startPoint: .leading, endPoint: .trailing))
+                    
+                Text("Score ")
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+            Divider()
+            
             Grid (viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     self.viewModel.choose(card: card)
                 }
                 .padding(5)
             }
-            	.foregroundColor(Color.orange)
+            .foregroundColor(theme.color)
             	.padding()
         	
             Divider()
             Button(action: {
-                
+                self.viewModel.restart()
             }) {
                 HStack{
                     Image(systemName: "play")

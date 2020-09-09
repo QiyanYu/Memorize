@@ -8,22 +8,6 @@
 
 import SwiftUI
 
-
-//struct Theme {
-//    let randomNumber = Int.random(in: 2...5)
-//    struct Animal {
-//        let name = "animal"
-//        let color = Color.green
-//        var emojis = ["🐻","🦊","🐶","🐱","🐭","🐼","🐨","🐯","🦁","🐮","🐷","🐸"]
-//
-//        init() {
-//            emojis.shuffle()
-//        }
-//
-//
-//    }
-//}
-
 struct Theme {
     var name: String
     var color: Color
@@ -52,9 +36,8 @@ struct Theme {
                 ("nationflag", Color.gray, ["🇩🇿","🇦🇸","🇦🇹","🇦🇿","🇧🇪","🇧🇯","🇻🇬","🇰🇾","🇨🇦","🇨🇱","🇨🇳","🇨🇻"])
         default:
         	(self.name, self.color, self.emojis) =
-                ("ERROR",Color.black,[])
+                ("ERROR",Color.black,[]) //TODO: Bogus!
         }
     }
-    
 }
 
