@@ -12,6 +12,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
     var cards: Array<Card>
     var theme: Theme
     var score = 0
+    var time = Date.init()
     var indexOfTheOneAndOnlyFacedUp: Int? {
         get {
             cards.indices.filter { cards[$0].isFacedUp }.only
@@ -29,7 +30,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
                 if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
-                    score += 2
+                    let interval = time.timeIntervalSinceNow
+                    print("interval \(interval)")
+                    print("Double interval \(Double(interval))")
+                    score += max(Int(6 + Double(interval)), 2)
                 } else {
                     if cards[chosenIndex].isSeen {
                         score -= 1
@@ -43,11 +47,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
                 self.cards[potentialMatchIndex].isSeen = true
             } else {
                 indexOfTheOneAndOnlyFacedUp = chosenIndex
+                time = Date.init()
             }
         }
     }
-    
-    
     
     init(numberOfPairsOfCards: Int, theme: Theme, cardContentFactory: (Int) -> CardContent) {
         self.theme = theme

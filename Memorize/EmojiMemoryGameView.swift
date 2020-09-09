@@ -14,7 +14,7 @@ struct EmojiMemoryGameView: View {
     var body: some View {
         let theme = self.viewModel.getTheme()
         return VStack {
-            HStack{
+            VStack{
                 Text(theme.name)
                     .font(.title)
                     .fontWeight(.bold)
@@ -23,9 +23,10 @@ struct EmojiMemoryGameView: View {
                     .foregroundColor(.white)
                     .background(LinearGradient(gradient: Gradient(colors: [Color("LizardDark"), Color("LizardLight")]), startPoint: .leading, endPoint: .trailing))
                     
-                Text("Score \(viewModel.getScore())")
+                Text("Score: \(viewModel.getScore())")
                     .font(.title)
                     .fontWeight(.bold)
+                
             }
             Divider()
             
