@@ -23,7 +23,7 @@ struct EmojiMemoryGameView: View {
                     .foregroundColor(.white)
                     .background(LinearGradient(gradient: Gradient(colors: [Color("LizardDark"), Color("LizardLight")]), startPoint: .leading, endPoint: .trailing))
                     
-                Text("Score ")
+                Text("Score \(viewModel.getScore())")
                     .font(.title)
                     .fontWeight(.bold)
             }
