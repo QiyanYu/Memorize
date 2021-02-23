@@ -74,18 +74,12 @@
 		9A948FE424FF0CA50025B9F7 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				9A50D6BF2505AD2C005924F4 /* Array+Identifiable.swift */,
-				9A8D95A02506BB2300983289 /* Array+Only.swift */,
 				9A948FE524FF0CA50025B9F7 /* AppDelegate.swift */,
-				9A9D73F925031CFA000EE0FD /* Grid.swift */,
-				9A50D6BB25059D2E005924F4 /* GridLayout.swift */,
 				9A948FE724FF0CA50025B9F7 /* SceneDelegate.swift */,
-				9A948FE924FF0CA50025B9F7 /* EmojiMemoryGameView.swift */,
-				9ADA2BE2252F963800E0B33F /* Cardify.swift */,
-				9A75F3F9252CF17600E911E8 /* Pie.swift */,
-				9A948FF924FF62980025B9F7 /* MemoryGame.swift */,
-				9A02C61325002292004D01B2 /* EmojiMemoryGame.swift */,
-				9A8D95A22506DD7D00983289 /* Theme.swift */,
+				9AE3970825E5BCE600EE2544 /* View */,
+				9AE3970D25E5C08C00EE2544 /* ViewModel */,
+				9AE3970E25E5C09900EE2544 /* Model */,
+				9AE3970725E5BCC400EE2544 /* Helper */,
 				9A948FEB24FF0CA60025B9F7 /* Assets.xcassets */,
 				9A948FF024FF0CA60025B9F7 /* LaunchScreen.storyboard */,
 				9A948FF324FF0CA60025B9F7 /* Info.plist */,
@@ -100,6 +94,52 @@
 				9A948FEE24FF0CA60025B9F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9AE3970725E5BCC400EE2544 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9A8D95A02506BB2300983289 /* Array+Only.swift */,
+				9A50D6BF2505AD2C005924F4 /* Array+Identifiable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9AE3970825E5BCE600EE2544 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A948FE924FF0CA50025B9F7 /* EmojiMemoryGameView.swift */,
+				9A75F3F9252CF17600E911E8 /* Pie.swift */,
+				9ADA2BE2252F963800E0B33F /* Cardify.swift */,
+				9AE3970A25E5BCFC00EE2544 /* Helper */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AE3970A25E5BCFC00EE2544 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9A9D73F925031CFA000EE0FD /* Grid.swift */,
+				9A50D6BB25059D2E005924F4 /* GridLayout.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9AE3970D25E5C08C00EE2544 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A8D95A22506DD7D00983289 /* Theme.swift */,
+				9A02C61325002292004D01B2 /* EmojiMemoryGame.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9AE3970E25E5C09900EE2544 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A948FF924FF62980025B9F7 /* MemoryGame.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +169,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Ryan;
 				TargetAttributes = {
 					9A948FE124FF0CA50025B9F7 = {
@@ -228,6 +268,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -288,6 +329,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
